@@ -89,6 +89,10 @@ function opendeckselector() {
       {
         cardlist = "decks/EverythingDeck/carddb.json";
       }
+      if(selecteddeck == "TSOC Personal IR")
+      {
+        cardlist = "decks/TSOC-Personal-IR/carddb.json";
+      }
       try{
         let result = $.getJSON(cardlist, function(h) {
           $(a).html("<img class='full' src='"+h.red+"'>");

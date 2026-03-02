@@ -1,0 +1,6 @@
+session_id,date,cohort_size,scenario_focus,time_to_triage_min,time_to_escalation_min,triage_accuracy_0_3,escalation_correctness_0_3,communication_quality_0_3,playbook_adherence_0_3,facilitator_notes
+TSOC-001,2026-03-02,4,Student Email Account Takeover,11,18,1,1,2,1,"Baseline run; team missed early institutional escalation trigger."
+TSOC-002,2026-03-04,4,Financial Aid Phishing Link Clicked,9,15,2,2,2,2,"Faster triage; communication still too technical for victim audience."
+TSOC-003,2026-03-06,5,Lost Device with Saved Sessions,8,13,2,2,3,2,"Good calm communication and clearer sequencing."
+TSOC-004,2026-03-09,4,Social Media Impersonation Attempt,7,11,3,3,3,3,"Strong escalation call and complete handoff summary."
+TSOC-005,2026-03-11,5,Credential Reuse Exposure Alert,6,10,3,3,3,3,"Most consistent run; team used full checklist with minimal facilitator correction."

@@ -1,0 +1,266 @@
+{
+  "title": "TSOC Personal IR Pilot",
+  "revdate": "03-01-2026",
+  "link": "",
+  "data": [
+    {
+      "name": "Student Email Account Takeover",
+      "image": "decks/CoreV3/BNB_CARDS_v3_01.png",
+      "type": "initial",
+      "id": "001",
+      "details": "<ul><li>Initial indicator: unusual mailbox rules and security alerts.</li><li>Checkpoint: verify identity and lock sessions.</li><li>Escalation: refer to campus IT if university account is affected.</li></ul>"
+    },
+    {
+      "name": "Financial Aid Phishing Link Clicked",
+      "image": "decks/CoreV3/BNB_CARDS_v3_02.png",
+      "type": "initial",
+      "id": "002",
+      "details": "<ul><li>Initial indicator: user clicked aid-related phishing email.</li><li>Checkpoint: immediate password and MFA hygiene steps.</li><li>Escalation: advise fraud monitoring if payment details were entered.</li></ul>"
+    },
+    {
+      "name": "Lost Device with Saved Sessions",
+      "image": "decks/CoreV3/BNB_CARDS_v3_03.png",
+      "type": "initial",
+      "id": "003",
+      "details": "<ul><li>Initial indicator: lost phone or laptop with active auth sessions.</li><li>Checkpoint: revoke sessions and remove trusted devices.</li><li>Escalation: campus safety referral for confirmed theft.</li></ul>"
+    },
+    {
+      "name": "Social Media Impersonation Attempt",
+      "image": "decks/CoreV3/BNB_CARDS_v3_04.png",
+      "type": "initial",
+      "id": "004",
+      "details": "<ul><li>Initial indicator: fake profile requests contacts and money.</li><li>Checkpoint: report impersonation and preserve screenshots.</li><li>Escalation: legal/privacy path if doxxing accompanies impersonation.</li></ul>"
+    },
+    {
+      "name": "Credential Reuse Exposure Alert",
+      "image": "decks/CoreV3/BNB_CARDS_v3_05.png",
+      "type": "initial",
+      "id": "005",
+      "details": "<ul><li>Initial indicator: breach notification for reused password.</li><li>Checkpoint: rotate credentials by criticality and unique passphrases.</li><li>Escalation: IT helpdesk referral if campus SSO credentials were reused.</li></ul>"
+    },
+    {
+      "name": "MFA Fatigue Prompt Bombing",
+      "image": "decks/CoreV3/BNB_CARDS_v3_11.png",
+      "type": "pivot",
+      "id": "006",
+      "details": "<ul><li>Pivot indicator: repeated push prompts while user is inactive.</li><li>Checkpoint: disable push, move to phishing-resistant method.</li><li>Escalation: immediate supervisor review for active compromise risk.</li></ul>"
+    },
+    {
+      "name": "Malicious OAuth App Consent",
+      "image": "decks/CoreV3/BNB_CARDS_v3_12.png",
+      "type": "pivot",
+      "id": "007",
+      "details": "<ul><li>Pivot indicator: suspicious third-party app token granted.</li><li>Checkpoint: revoke app tokens and audit connected services.</li><li>Escalation: IT referral when university tenant scope is involved.</li></ul>"
+    },
+    {
+      "name": "SIM Swap Suspicion",
+      "image": "decks/CoreV3/BNB_CARDS_v3_13.png",
+      "type": "pivot",
+      "id": "008",
+      "details": "<ul><li>Pivot indicator: sudden loss of phone service and account reset attempts.</li><li>Checkpoint: carrier lock and priority account recovery.</li><li>Escalation: law enforcement recommendation for financial theft indicators.</li></ul>"
+    },
+    {
+      "name": "Recovery Email Changed",
+      "image": "decks/CoreV3/BNB_CARDS_v3_14.png",
+      "type": "pivot",
+      "id": "009",
+      "details": "<ul><li>Pivot indicator: account recovery details modified without consent.</li><li>Checkpoint: identity verification and recovery path hardening.</li><li>Escalation: critical referral when multiple accounts show takeover.</li></ul>"
+    },
+    {
+      "name": "Browser Session Cookie Theft",
+      "image": "decks/CoreV3/BNB_CARDS_v3_15.png",
+      "type": "pivot",
+      "id": "010",
+      "details": "<ul><li>Pivot indicator: login alerts from new geography despite no credential reset.</li><li>Checkpoint: sign out everywhere and inspect recent extensions.</li><li>Escalation: refer to IT security if institutional apps were accessed.</li></ul>"
+    },
+    {
+      "name": "Cloud Drive Data Exfiltration",
+      "image": "decks/CoreV3/BNB_CARDS_v3_27.png",
+      "type": "c2",
+      "id": "011",
+      "details": "<ul><li>C2 indicator: mass downloads or share-link creation.</li><li>Checkpoint: revoke sessions and disable suspicious sharing.</li><li>Escalation: privacy/legal routing when sensitive records are involved.</li></ul>"
+    },
+    {
+      "name": "Stealth Auto-Forward to External Mailbox",
+      "image": "decks/CoreV3/BNB_CARDS_v3_28.png",
+      "type": "c2",
+      "id": "012",
+      "details": "<ul><li>C2 indicator: hidden forwarding rules to external domains.</li><li>Checkpoint: remove rules and inspect access history.</li><li>Escalation: report to IT if university communications are exposed.</li></ul>"
+    },
+    {
+      "name": "Command Channel via Messaging App",
+      "image": "decks/CoreV3/BNB_CARDS_v3_29.png",
+      "type": "c2",
+      "id": "013",
+      "details": "<ul><li>C2 indicator: attacker coordinates extortion via direct messages.</li><li>Checkpoint: preserve evidence and avoid direct negotiation.</li><li>Escalation: campus safety and legal supervisor referral as needed.</li></ul>"
+    },
+    {
+      "name": "Remote Access Tool Beaconing",
+      "image": "decks/CoreV3/BNB_CARDS_v3_30.png",
+      "type": "c2",
+      "id": "014",
+      "details": "<ul><li>C2 indicator: unknown remote-control software appears active.</li><li>Checkpoint: isolate endpoint from networks and reset credentials from clean device.</li><li>Escalation: IT support referral for endpoint remediation.</li></ul>"
+    },
+    {
+      "name": "New MFA Device Added by Attacker",
+      "image": "decks/CoreV3/BNB_CARDS_v3_18.png",
+      "type": "persist",
+      "id": "015",
+      "details": "<ul><li>Persistence indicator: unrecognized authenticator enrollment.</li><li>Checkpoint: remove unknown factors and enforce new enrollment.</li><li>Escalation: supervisor review for potential coordinated takeover.</li></ul>"
+    },
+    {
+      "name": "App Password Created for Legacy Access",
+      "image": "decks/CoreV3/BNB_CARDS_v3_19.png",
+      "type": "persist",
+      "id": "016",
+      "details": "<ul><li>Persistence indicator: app password generated without user intent.</li><li>Checkpoint: revoke app passwords and review mailbox access logs.</li><li>Escalation: IT referral when institutional identity provider is impacted.</li></ul>"
+    },
+    {
+      "name": "Trusted Device Added",
+      "image": "decks/CoreV3/BNB_CARDS_v3_20.png",
+      "type": "persist",
+      "id": "017",
+      "details": "<ul><li>Persistence indicator: unknown trusted device bypasses checks.</li><li>Checkpoint: clear trusted devices and force reauthentication.</li><li>Escalation: supervisor review if repeated persistence attempts continue.</li></ul>"
+    },
+    {
+      "name": "Stealth Login Rule Survives Reset",
+      "image": "decks/CoreV3/BNB_CARDS_v3_21.png",
+      "type": "persist",
+      "id": "018",
+      "details": "<ul><li>Persistence indicator: suspicious behavior continues after password reset.</li><li>Checkpoint: full account control audit and session invalidation.</li><li>Escalation: production SOC referral if enterprise controls are bypassed.</li></ul>"
+    },
+    {
+      "name": "Identity Verification Intake",
+      "image": "decks/CoreV3/BNB_CARDS_v3_33.png",
+      "type": "procedure",
+      "id": "019",
+      "details": "<ul><li>Confirm requester identity through approved channel before guidance.</li><li>Record severity and immediate safety concerns.</li></ul>"
+    },
+    {
+      "name": "Account Recovery Checklist",
+      "image": "decks/CoreV3/BNB_CARDS_v3_34.png",
+      "type": "procedure",
+      "id": "020",
+      "details": "<ul><li>Recover primary account first, then cascade to linked accounts.</li><li>Prioritize email, identity provider, and financial platforms.</li></ul>"
+    },
+    {
+      "name": "Revoke All Sessions",
+      "image": "decks/CoreV3/BNB_CARDS_v3_35.png",
+      "type": "procedure",
+      "id": "021",
+      "details": "<ul><li>Sign out all sessions across major accounts from a known-clean device.</li><li>Re-check alerts after forced reauth.</li></ul>"
+    },
+    {
+      "name": "MFA Hardening Procedure",
+      "image": "decks/CoreV3/BNB_CARDS_v3_36.png",
+      "type": "procedure",
+      "id": "022",
+      "details": "<ul><li>Replace weak MFA methods with phishing-resistant options where possible.</li><li>Disable push approvals during active attack.</li></ul>"
+    },
+    {
+      "name": "Unique Passphrase Reset Plan",
+      "image": "decks/CoreV3/BNB_CARDS_v3_37.png",
+      "type": "procedure",
+      "id": "023",
+      "details": "<ul><li>Generate unique passphrases for high-priority accounts first.</li><li>Use a password manager workflow if available.</li></ul>"
+    },
+    {
+      "name": "Mailbox Rule and Delegate Audit",
+      "image": "decks/CoreV3/BNB_CARDS_v3_38.png",
+      "type": "procedure",
+      "id": "024",
+      "details": "<ul><li>Inspect forwarding rules, delegates, and signatures for tampering.</li><li>Remove unknown rules and preserve audit screenshots.</li></ul>"
+    },
+    {
+      "name": "Connected Apps Token Review",
+      "image": "decks/CoreV3/BNB_CARDS_v3_39.png",
+      "type": "procedure",
+      "id": "025",
+      "details": "<ul><li>Revoke unknown OAuth app tokens and stale integrations.</li><li>Reauthorize only trusted applications.</li></ul>"
+    },
+    {
+      "name": "Evidence Timeline Builder",
+      "image": "decks/CoreV3/BNB_CARDS_v3_40.png",
+      "type": "procedure",
+      "id": "026",
+      "details": "<ul><li>Capture key timestamps, alerts, and actions in sequence.</li><li>Use timeline for clean escalation handoff.</li></ul>"
+    },
+    {
+      "name": "Victim-Centered Communication",
+      "image": "decks/CoreV3/BNB_CARDS_v3_41.png",
+      "type": "procedure",
+      "id": "027",
+      "details": "<ul><li>Use clear language and avoid blame.</li><li>State what to do now, next, and who to contact.</li></ul>"
+    },
+    {
+      "name": "Escalation Handoff Template",
+      "image": "decks/CoreV3/BNB_CARDS_v3_42.png",
+      "type": "procedure",
+      "id": "028",
+      "details": "<ul><li>Document severity, impact, actions taken, and unresolved risk.</li><li>Provide concise handoff to supervisor or designated office.</li></ul>"
+    },
+    {
+      "name": "Caller Reports Active Extortion Message",
+      "image": "decks/CoreV3/BNB_CARDS_v3_46.png",
+      "type": "inject",
+      "id": "029",
+      "details": "<ul><li>Inject effect: immediate severity increase.</li><li>Decision checkpoint: campus safety referral language.</li></ul>"
+    },
+    {
+      "name": "Parent or Guardian Calls in Panic",
+      "image": "decks/CoreV3/BNB_CARDS_v3_47.png",
+      "type": "inject",
+      "id": "030",
+      "details": "<ul><li>Inject effect: communications complexity rises.</li><li>Decision checkpoint: verify authority before disclosing details.</li></ul>"
+    },
+    {
+      "name": "Student Reveals Reused Password on Banking App",
+      "image": "decks/CoreV3/BNB_CARDS_v3_48.png",
+      "type": "inject",
+      "id": "031",
+      "details": "<ul><li>Inject effect: financial risk introduced.</li><li>Decision checkpoint: prioritize financial account protection guidance.</li></ul>"
+    },
+    {
+      "name": "Unexpected Login from Another Country",
+      "image": "decks/CoreV3/BNB_CARDS_v3_49.png",
+      "type": "inject",
+      "id": "032",
+      "details": "<ul><li>Inject effect: threat confidence rises to confirmed compromise.</li><li>Decision checkpoint: escalate severity and trigger recovery sequence.</li></ul>"
+    },
+    {
+      "name": "University SSO Also Shows Suspicious Access",
+      "image": "decks/CoreV3/BNB_CARDS_v3_50.png",
+      "type": "inject",
+      "id": "033",
+      "details": "<ul><li>Inject effect: institutional impact appears.</li><li>Decision checkpoint: mandatory referral to IT helpdesk and SOC.</li></ul>"
+    },
+    {
+      "name": "Caller Mentions Doxxing and Stalking Threats",
+      "image": "decks/CoreV3/BNB_CARDS_v3_51.png",
+      "type": "inject",
+      "id": "034",
+      "details": "<ul><li>Inject effect: safety concerns become primary.</li><li>Decision checkpoint: campus safety referral and evidence preservation guidance.</li></ul>"
+    },
+    {
+      "name": "Fraud Alert on Linked Payment Method",
+      "image": "decks/CoreV3/BNB_CARDS_v3_52.png",
+      "type": "inject",
+      "id": "035",
+      "details": "<ul><li>Inject effect: account compromise has financial consequences.</li><li>Decision checkpoint: direct to bank fraud workflows and identity protections.</li></ul>"
+    },
+    {
+      "name": "Critical Coursework Locked by Account Loss",
+      "image": "decks/CoreV3/BNB_CARDS_v3_46.png",
+      "type": "inject",
+      "id": "036",
+      "details": "<ul><li>Inject effect: urgency and impact increase.</li><li>Decision checkpoint: prioritize account recovery path and service referrals.</li></ul>"
+    }
+  ],
+  "red": "img/bb-back-init.png",
+  "yellow": "img/bb-back-pivot.png",
+  "brown": "img/bb-back-c2.png",
+  "purple": "img/bb-back-persist.png",
+  "grey": "img/bb-back-inject.png",
+  "green": "",
+  "logo": ""
+}

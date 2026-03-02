@@ -8,6 +8,19 @@ Dashboard for conducting [Backdoors & Breaches](https://www.blackhillsinfosec.co
 
 Backdoors & Breaches is the property of [Black Hills InfoSec](https://www.blackhillsinfosec.com/). It is a great tool for conducting incident response walkthroughs and training seminars.
 
+## TSOC Personal IR Pilot
+This fork includes a Teaching Security Operations Center (TSOC) pilot track focused on personal incident response education for university use.
+
+- Program charter and boundaries: [docs/tsoc/program-charter.md](docs/tsoc/program-charter.md)
+- Facilitator guide: [docs/tsoc/facilitator-guide.md](docs/tsoc/facilitator-guide.md)
+- Student role cards: [docs/tsoc/student-role-cards.md](docs/tsoc/student-role-cards.md)
+- After-action template: [docs/tsoc/after-action-template.md](docs/tsoc/after-action-template.md)
+- Pilot metrics: [docs/tsoc/pilot-metrics.csv](docs/tsoc/pilot-metrics.csv)
+- Pilot report: [docs/tsoc/pilot-report.md](docs/tsoc/pilot-report.md)
+
+### Educational Service Disclaimer
+This TSOC pilot is training-only and does not provide live incident response, legal advice, or production SOC replacement services.
+
 
 # About This Script
 This is a simple HTML page, best viewed at 1920x1080.

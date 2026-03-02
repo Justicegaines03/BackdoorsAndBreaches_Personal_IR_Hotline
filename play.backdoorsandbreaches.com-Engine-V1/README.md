@@ -8,6 +8,11 @@ Dashboard for conducting [Backdoors & Breaches](https://www.blackhillsinfosec.co
 
 Backdoors & Breaches is the property of [Black Hills InfoSec](https://www.blackhillsinfosec.com/). It is a great tool for conducting incident response walkthroughs and training seminars.
 
+## University TSOC Training Note
+This repository variant includes a training-only personal incident response pilot for a university Teaching Security Operations Center (TSOC).
+
+This pilot does not provide live incident response services and should be used only for educational simulation and analyst development.
+
 
 # About This Script
 This is a simple HTML page, best viewed at 1920x1080.
