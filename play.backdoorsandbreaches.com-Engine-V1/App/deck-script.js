@@ -41,7 +41,13 @@ function opendeckselector() {
   //if it is null, that means it is the first time that we are entering the website, so let's just set it to the core deck
   if (selecteddeck === null)
   {
-    selecteddeck = 'CoreV3';
+    const urlDeck = new URLSearchParams(window.location.search).get("deck");
+    if (urlDeck && urlDeck.trim() !== "") {
+      selecteddeck = urlDeck;
+      localStorage.setItem("deckKey", selecteddeck);
+    } else {
+      selecteddeck = 'CoreV3';
+    }
   }
       if (selecteddeck == 'CoreV1'){
           cardlist = 'decks/CoreV1/carddb.json'

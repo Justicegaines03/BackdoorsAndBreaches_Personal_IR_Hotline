@@ -325,6 +325,23 @@ PER = 0
 
         //Build the list out
 
+    function isTsocDeck() {
+      return localStorage.getItem("deckKey") == "TSOC Personal IR";
+    }
+
+    function escapeHtml(text) {
+      if (text == null) return "";
+      return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function cardLabelHtml(name) {
+      if (!isTsocDeck()) return "";
+      return "<div class='tsoc-card-label'>" + escapeHtml(name) + "</div>";
+    }
+
 
     function buildlist(item, i) {
       
@@ -343,13 +360,12 @@ PER = 0
         countID = 1;
         $.each(h.data, function(i, x) {
           console.log(countID);
-
               if (item=="proc" && x.type=="procedure") {
                   c ="procimg"
                   if (x.details==null  || x.details==""){
-                       li = "<div class='"+item+"' id='"+countID+"'><a href='"+x.image+"' data-lightbox='procedure"+countID+"'><img class='"+c+"' src='"+x.image+"'></a></div>"
+                       li = "<div class='"+item+"' id='"+countID+"'><div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='procedure"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div></div>"
                      } else {
-                       li = "<div class='"+item+"' id='"+countID+"'><a href='"+x.image+"' data-lightbox='procedure"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a></div>"
+                       li = "<div class='"+item+"' id='"+countID+"'><div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='procedure"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div></div>"
                      }
                   if (!cardNames.includes(x.name))
                   {
@@ -363,9 +379,9 @@ PER = 0
                   c="inject"
                   //console.log("inject found");
                   if (x.details==null|| x.details==""){
-                       li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='inject"+countID+"'><img src='"+x.image+"'></a></div>"
+                       li = "<div class='"+c+"'><div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='inject"+countID+"'><img src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div></div>"
                      } else {
-                       li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='inject"+countID+"' data-title='"+x.details+"'><img src='"+x.image+"'></a></div>"
+                       li = "<div class='"+c+"'><div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='inject"+countID+"' data-title='"+x.details+"'><img src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div></div>"
                      }
                      if (!cardNames.includes(x.name))
                      {
@@ -380,9 +396,9 @@ PER = 0
               if (item=="init" && x.type=="initial") {
                   c="scenimg"
                   if (x.details==null|| x.details==""){
-                       li = "<a href='"+x.image+"' data-lightbox='initial"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                       li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='initial"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                      } else {
-                       li = "<a href='"+x.image+"' data-lightbox='initial"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                       li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='initial"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                      }
                      if (!cardNames.includes(x.name))
                      {
@@ -393,9 +409,9 @@ PER = 0
               if (item=="pivot" && x.type=="pivot") {
                   c="scenimg"
                   if (x.details==null|| x.details==""){
-                       li = "<a href='"+x.image+"' data-lightbox='pivot"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                       li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='pivot"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                      } else {
-                       li = "<a href='"+x.image+"' data-lightbox='pivot"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                       li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='pivot"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                      }
                      if (!cardNames.includes(x.name))
                      {
@@ -406,9 +422,9 @@ PER = 0
               if (item=="c2" && x.type=="c2") {
                   c="scenimg"
                   if (x.details==null|| x.details==""){
-                       li = "<a href='"+x.image+"' data-lightbox='c2"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                       li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='c2"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                      } else {
-                       li = "<a href='"+x.image+"' data-lightbox='c2"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                       li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='c2"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                      }
                      if (!cardNames.includes(x.name))
                      {
@@ -419,9 +435,9 @@ PER = 0
               if (item=="persist" && x.type=="persist") {
                   c="scenimg"
                   if (x.details==null|| x.details==""){
-                      li = "<a href='"+x.image+"' data-lightbox='persist"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                      li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='persist"+countID+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                     } else {
-                      li = "<a href='"+x.image+"' data-lightbox='persist"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>"
+                      li = "<div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='persist"+countID+"' data-title='"+x.details+"'><img class='"+c+"' src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div>"
                     }
                     if (!cardNames.includes(x.name))
                     {
@@ -435,9 +451,9 @@ PER = 0
                     
                     c="consultant"
                     if (x.details==null|| x.details==""){
-                         li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='consultant"+countID+"'><img src='"+x.image+"'></a></div>"
+                         li = "<div class='"+c+"'><div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='consultant"+countID+"'><img src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div></div>"
                        } else {
-                         li = "<div class='"+c+"'><a href='"+x.image+"' data-lightbox='consultant"+countID+"' data-title='"+x.details+"'><img src='"+x.image+"'></a></div>"
+                         li = "<div class='"+c+"'><div class='tsoc-card-wrap'><a href='"+x.image+"' data-lightbox='consultant"+countID+"' data-title='"+x.details+"'><img src='"+x.image+"'></a>" + cardLabelHtml(x.name) + "</div></div>"
                        }
                        if (!cardNames.includes(x.name))
                        {
